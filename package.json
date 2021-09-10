@@ -1,0 +1,9 @@
+{
+  "name": "blackcat-arcade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Asaduzzaman Shishir",
+  "license": "ISC",
+  "type": "module"
+}
