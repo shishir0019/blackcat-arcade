@@ -1,22 +1,18 @@
 const Arcade = require('./src/model/Arcade');
-const Board = require('./src/model/Board');
-const Display = require('./src/model/Display');
-const Controller = require('./src/model/Controller');
-const Keyboard = require('./src/model/Keyboard');
-const Mouse = require('./src/model/Mouse');
 
-const arcade = new Arcade();
+const options = {
+    display: {
+        width: 320,
+        height: 512,
+        dpi: 16,
+        dotColor: '#f00'
+    },
+    keyboard: {},
+    mouse: {},
+    controller: {}
+}
 
-const board = arcade.board;
-const display = arcade.display;
-const controller = arcade.controller;
-const keyboard = arcade.keyboard;
-const mouse = arcade.mouse;
-
-board.connectDisplay(display);
-board.connectController(controller);
-board.connectKeyboard(keyboard);
-board.connectMouse(mouse);
+const arcade = new Arcade(options);
 
 arcade.power();
 
